@@ -27,6 +27,10 @@ class PrettyTextFieldAutoCompleteWidget extends StatelessWidget {
           controller: fieldTextEditingController,
           focusNode: fieldFocusNode,
           decoration: InputDecoration(
+            suffixIcon: Padding(
+              padding: EdgeInsets.all(2.0),
+              child: IconButton(icon: Icon(Icons.clear), onPressed: () {fieldTextEditingController.clear();})
+            ),
             focusedBorder: OutlineInputBorder(
               borderSide: BorderSide(color: Colors.black),
               borderRadius: BorderRadius.all(
